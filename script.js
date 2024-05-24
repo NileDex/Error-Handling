@@ -20,34 +20,43 @@ function validateFullname() {
 
 function validatePhone() {
     var phone = document.getElementById('contact-phone').value;
+
     if (phone.length == 0) {
         phoneError.innerHTML = 'Phone Number Required';
         return false;
     }
     if (phone.length !== 11) {
-        phoneError.innerHTML = 'Phone Number Should be 11digits';
+        phoneError.innerHTML = 'Phone Number Should be 11 digits';
         return false;
     }
-    // if (!phone.match(/^[0-10]{11}$/)){
-    //     phoneError.innerHTML ='only digits please';
-    //     return false;
-    // }
+    if (!phone.match(/^[0-9]{11}$/)) {
+        phoneError.innerHTML = 'Only digits please';
+        return false;
+    }
     phoneError.innerHTML = '<i class="fa-solid fa-check-double"></i>';
     return true;
 }
+
 function validateEmail() {
     var email = document.getElementById('contact-email').value;
+
     if (email.length == 0) {
-        phoneError.innerHTML = 'Email Required';
+        emailError.innerHTML = 'Email Required';
         return false;
     }
-    if (name.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[a-z]{2,4}$/)) {
+    
+
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    
+    if (!email.match(emailPattern)) {
         emailError.innerHTML = "Invalid Email";
-        return False
+        return false;
     }
+
     emailError.innerHTML = '<i class="fa-solid fa-check-double"></i>';
     return true;
 }
+
 function validateMessage() {
     var message = document.getElementById('contactmessage').value;
     var required = 30;
