@@ -1,0 +1,89 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: "Roboto Flex", sans-serif;
+}
+.container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+.form-container {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
+}
+
+.form-container .form-group {
+    width: 100%; /* Ensure the form group takes the full width of its container */
+    padding: auto;
+    margin: 10px;
+}
+label{
+    width: 100px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.form-group input{
+    width: 300px;
+    line-height: 20px;
+    border: none;
+    border-bottom: 0.5px solid black;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 15px;    
+   
+}
+.form-group span i{
+    color: rgb(0, 255, 47);
+    font-size: 13px;
+
+}
+.err{
+    margin-left: 100px;
+    color: red; 
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+}
+.form-group textarea{
+    width:300px;
+    line-height: 20px;
+    border: none;
+    border-bottom: 0.5px solid black;
+    margin-top: 20px;   
+}
+button{
+    margin-top: 45px;
+    padding: 7px;
+    width: 300px;
+    line-height: 20px;
+    background: rgb(83, 154, 241);
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-weight: bold;
+    color: #fff;
+}
+.form-container #logo{
+    font-size: 55px;
+    background-color: rgb(255, 252, 249);
+    padding: 20px 25px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px black;
+    
+}
+#errorHandler{
+    background: red;
+    color: #fff;
+    padding: 7px;
+    text-align: center;
+    font-weight: bold;
+}
